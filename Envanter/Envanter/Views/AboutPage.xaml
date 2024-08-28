@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.AboutPage"
+             Title="Hakkımızda"
+             BackgroundColor="#f0f0f0">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Uygulama Başlığı -->
+            <Frame BackgroundColor="#2196F3" CornerRadius="10" Padding="15" HasShadow="True">
+                <Label Text="Mersin Üniversitesi Bilgi İşlem Donanım Destek Şube Müdürlüğü"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+
+            <!-- Uygulama Açıklaması -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <Label Text="Bu mobil uygulama, Mersin Üniversitesi Bilgi İşlem Donanım Destek Şube Müdürlüğü için geliştirilmiştir. Uygulama, donanım bölümüne alınan ürünlerin stok takibini kolaylaştırmak amacıyla tasarlanmıştır."
+                       FontSize="Medium"
+                       TextColor="#333"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+
+            <!-- Özellikler Başlığı -->
+            <Label Text="Özellikler"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   HorizontalOptions="Start"/>
+
+            <!-- Özellikler Listesi -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <StackLayout Spacing="10">
+                    <Label Text="• Ürün ekleme ve çıkarma"
+                           FontSize="16"
+                           TextColor="#555"/>
+                    <Label Text="• Ürün stok miktarını görüntüleme"
+                           FontSize="16"
+                           TextColor="#555"/>
+                    <Label Text="• Kategori ekleme ve güncelleme"
+                           FontSize="16"
+                           TextColor="#555"/>
+                    <Label Text="• Detaylı ürün bilgisi görüntüleme"
+                           FontSize="16"
+                           TextColor="#555"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Ek Bilgi -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <Label Text="Bu uygulama, donanım bölümündeki iş süreçlerini daha verimli ve düzenli hale getirmek için geliştirilmiştir. Uygulama ile ilgili geri bildirimlerinizi ve önerilerinizi memnuniyetle karşılarız."
+                       FontSize="Medium"
+                       TextColor="#333"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

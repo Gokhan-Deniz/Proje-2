@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.MainPage"
+             Title="Ürün İşlemleri">
+
+    <!-- Arka Plan Renk Geçişi -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0" />
+            <GradientStop Color="Orange" Offset="0.6" />
+            <GradientStop Color="Blue" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle" Clicked="OnAddProductClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!-- Başlıklar -->
+        <Grid Padding="10" BackgroundColor="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Ad" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="StartAndExpand" />
+            <Label Text="Kategori" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="StartAndExpand" />
+            <Label Text="Stok" FontAttributes="Bold" Grid.Column="2" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Kullan" FontAttributes="Bold" Grid.Column="3" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Sİl" FontAttributes="Bold" Grid.Column="4" HorizontalOptions="CenterAndExpand" />
+        </Grid>
+
+        <!-- Ürünler burada listelenecek -->
+        <StackLayout x:Name="productStackLayout" BackgroundColor="#E0E0E0">
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

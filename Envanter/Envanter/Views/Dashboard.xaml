@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.Dashboard"
+             Title="Mersin Üniversitesi Ana Sayfası">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0" />
+            <GradientStop Color="Orange" Offset="0.6" />
+            <GradientStop Color="Blue" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Çıkış Yap" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Frame Padding="20" Margin="20" BackgroundColor="#fd684d" HorizontalOptions="FillAndExpand" CornerRadius="18">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Silhouette-PNG-Photo.png" WidthRequest="40" HeightRequest="40"/>
+                <Label Text="Stok İşlemleri" TextColor="White"  VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <Frame Padding="20" Margin="20" BackgroundColor="#fd684d" HorizontalOptions="FillAndExpand" CornerRadius="18">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/see-icon.png" WidthRequest="40" HeightRequest="40"/>
+                <Label Text="Stoktakileri Göster" TextColor="White"  VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <Frame Padding="20" Margin="20"  BackgroundColor="#fd684d" HorizontalOptions="FillAndExpand" CornerRadius="18">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://www.pikpng.com/pngl/b/541-5410770_png-file-svg-categories-icon-png-clipart.png" WidthRequest="40" HeightRequest="40"/>
+                <Label Text="Kategori İşlemleri" TextColor="White"  VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <Frame Padding="20" Margin="20" BackgroundColor="#fd684d" HorizontalOptions="FillAndExpand" CornerRadius="18">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://icons.veryicon.com/png/o/miscellaneous/member-circle-im/about-12.png" WidthRequest="40" HeightRequest="40"/>
+                <Label Text="Hakkımızda" TextColor="White"  VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+            </Frame.GestureRecognizers>
+        </Frame>
+    </StackLayout>
+</ContentPage>

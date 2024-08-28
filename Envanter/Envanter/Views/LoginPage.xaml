@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.LoginPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="25" VerticalOptions="CenterAndExpand" Padding="30,0">
+        <Image Grid.Row="0" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mersin_University_logo.svg/512px-Mersin_University_logo.svg.png" HeightRequest="150" WidthRequest="150" Aspect="AspectFit" />
+        <Label Grid.Row="1" FontAttributes="Bold" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Text="Giriş Yap" />
+        <Entry x:Name="UsernameEntry" Placeholder="Kullanıcı Adınız" Grid.Row="2" HeightRequest="40" BackgroundColor="#fdfbf6" />
+        <Entry x:Name="PasswordEntry" Placeholder="Şifreniz" IsPassword="True" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" />
+        <Button Text="Giriş Yap" Clicked="OnLoginButtonClicked" Grid.Row="4" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" HeightRequest="40" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
+        <Button Text="Hesabım Yok" Clicked="OnRegisterButtonClicked" Grid.Row="5" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" HeightRequest="40" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
+        <Label x:Name="MessageLabel" Grid.Row="6" TextColor="Red" IsVisible="False" HorizontalTextAlignment="Center" />
+    </Grid>
+</ContentPage>

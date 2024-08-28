@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.CategoriesPage"
+             Title="Kategori Sayfası">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0" />
+            <GradientStop Color="Wheat" Offset="0.6" />
+            <GradientStop Color="Gray" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle" Clicked="OnAddCategoryClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!-- Başlıklar -->
+        <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#dfe3ee">
+            <Label Text="ID" FontAttributes="Bold" HorizontalOptions="Start" WidthRequest="50" />
+            <Label Text="Kategori Adı" FontAttributes="Bold" HorizontalOptions="Start" WidthRequest="150" />
+            <Label Text="Düzenle" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" WidthRequest="100" />
+            <Label Text="Sil" FontAttributes="Bold" HorizontalOptions="End" WidthRequest="50" />
+        </StackLayout>
+        <!-- Kategoriler burada listelenecek -->
+        <StackLayout x:Name="categoryStackLayout" BackgroundColor="#f7f7f7">
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.AddProduct"
+             Title="Ürün Ekleme">
+
+    <!-- Arka Plan Renk Geçişi -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0" />
+            <GradientStop Color="Orange" Offset="0.6" />
+            <GradientStop Color="Blue" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout Padding="25" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400">
+        <!-- Yuvarlak İkon -->
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mersin_University_logo.svg/512px-Mersin_University_logo.svg.png"
+               HeightRequest="150"
+               WidthRequest="180"
+               Aspect="AspectFill"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+        </Image>
+
+        <!-- Ürün Bilgileri -->
+        <Entry x:Name="nameEntry" Placeholder="Ürün Adı" Margin="0,10" FontSize="20" FontAttributes="Italic" TextColor="#F0F0F0" />
+        <Entry x:Name="stockEntry" Placeholder="Stok Adedi" Keyboard="Numeric" Margin="0,10" FontSize="20" FontAttributes="Italic" TextColor="#F0F0F0" />
+        <Entry x:Name="barcodeEntry" Placeholder="Barkod" Margin="0,10" FontSize="20" FontAttributes="Italic" TextColor="#F0F0F0" />
+        <Button Text="Barkod Tara" Margin="0,10"
+                BackgroundColor="#4B1F17"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="20"
+                CornerRadius="18"
+                Clicked="OnScanBarcodeClicked"/>
+        <Editor x:Name="detailsEditor" Placeholder="Detaylar" Margin="0,10" FontSize="20" FontAttributes="Italic" TextColor="#F0F0F0" />
+        <Picker x:Name="categoryPicker" Title="Kategori Seçin" Margin="0,10" FontSize="20" FontAttributes="Italic" TextColor="#F0F0F0" />
+
+        <!-- Kaydet Butonu -->
+        <Button Text="Kaydet" Clicked="OnSaveProductClicked" 
+                BackgroundColor="#fd684d" 
+                TextColor="White" 
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="0,10"
+                CornerRadius="15"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Envanter.Views.ListePage"
+             Title="Ürün Listesi">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0" />
+            <GradientStop Color="Wheat" Offset="0.6" />
+            <GradientStop Color="Gray" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+        <!-- Üst Bar -->
+        <Grid Padding="10" BackgroundColor="#f7f7f7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Arama Barı -->
+            <SearchBar x:Name="searchBar" Grid.Column="0" Placeholder="Ürün ara" TextChanged="OnSearchBarTextChanged" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+
+            <!-- Kategori Seçim Dropdown -->
+            <Picker x:Name="categoryPicker" Grid.Column="1" Title="Kategori Seç" SelectedIndexChanged="OnCategoryPickerSelectedIndexChanged" FontSize="15" FontAttributes="Bold" TextColor="Black" />
+        </Grid>
+
+        <!-- Başlıklar -->
+        <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#66b2b2">
+            <Label Text="Ad" FontAttributes="Bold" HorizontalOptions="StartAndExpand" WidthRequest="100" />
+            <Label Text="Kategori" FontAttributes="Bold" HorizontalOptions="StartAndExpand" WidthRequest="100" />
+            <Label Text="Stok Miktarı" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" WidthRequest="100" />
+            <Label Text="Barkod Numarası" FontAttributes="Bold" HorizontalOptions="EndAndExpand" WidthRequest="150" />
+        </StackLayout>
+
+        <!-- Ürünler burada listelenecek -->
+        <StackLayout x:Name="productStackLayout" BackgroundColor="#f7f7f7">
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
